@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sana Khan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            background: radial-gradient(circle, #151515 0%, #050505 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .luxury-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 3.5rem 2.5rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(212, 175, 55, 0.2);
+            max-width: 450px;
+            width: 90%;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: #d4af37;
+            text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+            margin-bottom: 12px;
+        }
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffe066, #d4af37, #aa7c11);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        p {
+            font-size: 0.95rem;
+            color: #b5b5b5;
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.8px;
+        }
+        .date-badge {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 4px 15px;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .btn {
+            margin-top: 30px;
+            padding: 14px 40px;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        .btn:hover {
+            background: #d4af37;
+            color: #050505;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+    <div class="luxury-card">
+        <h1>HAPPY BIRTHDAY</h1>
+        <div class="name">Sana Khan</div> 
+        <p>Wishing you a flawless year ahead filled with elegance, grand success, and beautiful moments. May your day be as spectacular as you are.</p>
+        <div class="date-badge">OCTOBER 10</div>
+        <br>
+        <button class="btn" onclick="celebrate()">Tap to Celebrate</button>
+    </div>
+
+    <script>
+        function celebrate() {
+            confetti({
+                particleCount: 180,
+                spread: 85,
+                origin: { y: 0.6 },
+                colors: ['#d4af37', '#ffffff', '#aa7c11', '#ffe066']
+            });
+        }
+        window.onload = function() {
+            setTimeout(celebrate, 600);
+        };
+    </script>
+</body>
+</html>
